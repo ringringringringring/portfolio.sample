@@ -147,13 +147,14 @@ img {
 ------------------------------- */
 .about {
 	background-color: rgb(0, 0, 0);
-    max-width: 800px;
+/*    max-width: 800px;*/
     padding: 4rem;
    /* margin: 4rem auto 4rem;*/
     border-left-style:solid; /*オリジナル*/
     border-right-style:solid;/*オリジナル*/  
     border-color:deeppink ;/*オリジナル*/
     border-width: 10px;/*オリジナル*/
+    box-sizing: border-box;/*オリジナル*/
 }
 .about p {
     margin-bottom: 2rem;
@@ -166,9 +167,17 @@ img {
 
 /* BLOG (blog.html)
 ------------------------------- */
+.category{
+	background-color: #222;
+}
 .post {
-    margin-bottom: 3rem;
-/*    background-color: rgb(0, 0, 0);*/
+    padding-bottom: 3rem;
+    background-color: rgb(255, 255, 255);/*オリジナル*/
+    border-left-style:solid; /*オリジナル*/
+    border-right-style:solid;/*オリジナル*/
+    border-color:deeppink ;/*オリジナル*/
+    border-width: 10px;/*オリジナル*/
+    box-sizing: border-box;/*オリジナル*/
 }
 .post-title {
     font-weight: bold;
@@ -212,10 +221,19 @@ img {
 }
 
 /* サイドバー */
+.sidebar{
+	background-color: deeppink;
+	
+}
 .side-menu {
 	background-color: #222;/*オリジナル*/
     list-style: none;
-    margin-bottom: 3rem;
+    padding: 3rem;
+    border-left-style:solid; /*オリジナル*/
+    border-right-style:solid;/*オリジナル*/
+    border-color:deeppink ;/*オリジナル*/
+    border-width: 10px;/*オリジナル*/
+    box-sizing: border-box;/*オリジナル*/
 }
 .side-menu li {
     border-bottom: 1px solid #eee;
@@ -323,42 +341,48 @@ img {
 
 /* デスクトップ版
 ------------------------------- */
-@media (min-width: 800px) {
-    .page-title {
-        font-size: 4rem;
-    }
-    .heading-large {
-        font-size: 3rem;
-    }
-    .post-title {
-        font-size: 2.2rem;
-    }
+/*@media (min-width: 800px) {*/
+/*    .page-title {*/
+/*        font-size: 4rem;*/
+/*    }*/
+/*    .heading-large {*/
+/*        font-size: 3rem;*/
+/*    }*/
+/*    .post-title {*/
+/*        font-size: 2.2rem;*/
+/*    }*/
 
-    .page-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+/*    .page-header {*/
+/*        display: flex;*/
+/*        justify-content: space-between;*/
+/*        align-items: center;*/
+/*    }*/
 
-    .blog-contents {
-        display: flex;
-        justify-content: space-between;
-    }
-    .post {
-        width: 70%;
-    }
-    .sidebar {
-        width: 25%;
-    }
-    .sidebar .heading-medium {
-        text-align: left;
-        margin-bottom: 1rem;
-        border-bottom: 2px solid #333;
-        padding-bottom: 0.5rem;
-    }
+/*    .blog-contents {*/
+/*        display: flex;*/
+/*        justify-content: space-between;*/
+/*        border-left-style:solid; オリジナル*/
+/*        border-right-style:solid;オリジナル  */
+/*        border-color:deeppink ;オリジナル*/
+/*        border-width: 10px;オリジナル    */
+/*        box-sizing: border-box;オリジナル */
 
-    .grid {
-        gap: 2.5rem;
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
+/*    }*/
+/*    .post {*/
+/*        width: 100%;元70%*/
+/*    }*/
+/*    .sidebar {*/
+/*        width: 100%;元25%*/
+/*    }*/
+/*    .sidebar .heading-medium {*/
+/*        text-align: left;*/
+/*        margin-bottom: 1rem;*/
+/*        border-bottom: 2px solid #333;*/
+/*        padding-bottom: 0.5rem;*/
+/*    }*/
+
+/*    .grid {*/
+/*        gap: 2.5rem;*/
+/*        grid-template-columns: repeat(3, 1fr);*/
+/*    }*/
+/*}*/
