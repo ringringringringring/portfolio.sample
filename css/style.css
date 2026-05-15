@@ -1,0 +1,364 @@
+@charset "UTF-8";
+
+/* 共通部分
+------------------------------- */
+html {
+    font-size: 100%;
+}
+body {
+    font-family:
+        "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans",
+        sans-serif;
+    line-height: 1.7;
+    color: #333; /* カフェのブラウンからダークグレーに変更 */
+}
+a {
+    text-decoration: none;
+    color: deeppink; /* リンクをブルーに */
+}
+a:hover {
+    text-decoration: underline;
+}
+img {
+    max-width: 100%;
+}
+
+/* レイアウト */
+.wrapper {
+    max-width: 1120px;
+    margin: auto;
+    padding: 0 1.5rem;
+}
+.align-center {
+    text-align: center;
+}
+.intro{ /*オリジナル*/
+	text-align: center;
+	color: rgb(192, 192, 192);
+}
+
+/* 見出し */
+.font-english {
+    font-family: "Philosopher", sans-serif;
+    font-weight: normal;
+}
+.page-title,
+.heading-large,
+.heading-medium {
+    font-size: 3rem;
+    text-align: center;
+	color: #e0e0e0;
+}
+.page-title {
+    margin-top: 2rem;
+    line-height: 1.4;
+    color: #fff; /* カバー画像の上の文字は白に */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+.heading-large {
+    margin-bottom: 1rem;
+}
+
+/* ボタン */
+.btn {
+    display: inline-block;
+    font-size: 1.25rem;
+    background-color: deeppink;
+    color: #fff;
+    border-radius: 4px; /* ITっぽく少し角張らせる */
+    padding: 0.75rem 2rem;
+    transition: 0.3s;
+    font-family: "Philosopher", sans-serif;/*オリジナル*/
+
+}
+.btn:hover {
+    background-color: purple;
+    text-decoration: none;
+    color: #fff;
+}
+
+/* ヘッダー
+------------------------------- */
+.page-header {
+    padding-top: 1rem;
+}
+.logo-text {
+    font-size: 2rem;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+.logo-text:hover {
+    text-decoration: none;
+    color: #e0e0e0;
+}
+.main-nav {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    font-size: 1.25rem;
+    list-style: none;
+}
+.main-nav a {
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+.main-nav a:hover {
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* ヘッダーカバー画像
+------------------------------- */
+.cover {
+    background-color: #343a40; /* 画像がない場合の代替色 */
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    border-left-style:solid; /*オリジナル*/
+    border-right-style:solid;/*オリジナル*/  
+    border-color: deeppink;/*オリジナル*/
+    border-width: 10px;/*オリジナル*/
+    padding: 20px;/*オリジナル*/
+}
+.sub-cover {
+	
+	
+    background:linear-gradient(135deg,transparent 70%, deeppink) #495057; /*オリジナル*/
+    background-size: cover;
+    background-position: center;
+    height: 350px;
+   /* margin-bottom: 4rem;*/
+
+    border-left-style:solid; /*オリジナル*/
+    border-right-style:solid;/*オリジナル*/  
+    border-color: deeppink;/*オリジナル*/
+    border-width: 10px;/*オリジナル*/
+    padding: 20px;/*オリジナル*/
+}
+
+/* ※ 画像を用意する場合はここにPC等の背景画像のパスを指定します */
+/*
+.cover-home { background-image: url(../images/hero-home.jpg); }
+.cover-blog { background-image: url(../images/hero-blog.jpg); }
+.cover-works { background-image: url(../images/hero-works.jpg); }
+*/
+
+/* HOME (index)
+------------------------------- */
+.about {
+	background-color: rgb(0, 0, 0);
+    max-width: 800px;
+    padding: 4rem;
+   /* margin: 4rem auto 4rem;*/
+    border-left-style:solid; /*オリジナル*/
+    border-right-style:solid;/*オリジナル*/  
+    border-color:deeppink ;/*オリジナル*/
+    border-width: 10px;/*オリジナル*/
+}
+.about p {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    border-left-style:solid; /*オリジナル*/
+    border-right-style:solid;/*オリジナル*/  
+    border-color:deeppink ;/*オリジナル*/
+    border-width: 10px;/*オリジナル*/
+}
+
+/* BLOG (blog.html)
+------------------------------- */
+.post {
+    margin-bottom: 3rem;
+/*    background-color: rgb(0, 0, 0);*/
+}
+.post-title {
+    font-weight: bold;
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+.post-info {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    align-items: center;
+}
+.post-cat {
+    display: flex;
+    gap: 0.5rem;
+    list-style: none;
+}
+.post-cat a {
+    color: #555;
+    background-color: #f1f3f5;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    padding: 0.25rem 0.75rem;
+}
+.post-cat a:hover {
+    background-color: #e9ecef;
+    text-decoration: none;
+}
+.post-date {
+    color: #888;
+    font-size: 0.875rem;
+}
+.post-thumbnail {
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ddd;
+}
+.post p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+/* サイドバー */
+.side-menu {
+	background-color: #222;/*オリジナル*/
+    list-style: none;
+    margin-bottom: 3rem;
+}
+.side-menu li {
+    border-bottom: 1px solid #eee;
+}
+.side-menu a {
+    color: deeppink;
+    display: block;
+    padding: 0.75rem 0;
+}
+.side-menu a:hover {
+    color: purple;
+    padding-left: 0.5rem;
+    transition: padding 0.3s;
+}
+
+/* WORKS (works.html)
+------------------------------- */
+.grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+   /* margin-bottom: 4rem;*/
+    background-color: rgb(0, 0, 0);/*オリジナル*/
+    padding-top:2rem;/*オリジナル*/
+    padding-bottom:2rem;/*オリジナル*/
+    border-left-style:solid; /*オリジナル*/
+    border-right-style:solid;/*オリジナル*/  
+    border-color:deeppink ;/*オリジナル*/
+    border-width: 10px;/*オリジナル*/
+}
+.item {
+    background:#f1f3f5;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s;
+   
+}
+.item:hover {
+    transform: translateY(-5px);
+}
+.item img {
+    aspect-ratio: 16/9; /* アプリのスクショが映えるように16:9に変更 */
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    border: 1px solid #eee;
+}
+.item p {
+    font-size: 0.9rem;
+    color: #555;
+}
+.item strong {
+    color: #222;
+    font-size: 1.1rem;
+}
+
+/* フッター
+------------------------------- */
+.page-footer {
+	background:linear-gradient(225deg,transparent 70%, deeppink) dimgray; /*オリジナル*/
+    /*padding-top: 4rem;
+    border-top: 1px solid #eee;*/
+    border-left-style:solid; /*オリジナル*/
+    border-right-style:solid;/*オリジナル*/  
+    border-color:deeppink ;/*オリジナル*/
+    border-width: 10px;/*オリジナル*/
+    box-sizing: border-box;
+}
+.page-footer .heading-large {
+	color: #e0e0e0;
+    font-size: 2rem;
+}
+.info {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    padding: 0 1.5rem;
+    border-spacing: 0;
+}
+.info th,
+.info td {
+    border-bottom: 1px solid #ddd;
+}
+.info th {
+    text-align: left;
+    font-weight: bold;
+    padding: 1rem;
+    color: rgb(192, 192, 192);
+    width: 30%;
+}
+.info td {
+    padding: 1rem 0;
+    color: rgb(192, 192, 192);
+}
+.copyright {
+    background-color: #343a40;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 4rem;
+    color: rgb(192, 192, 192);
+
+}
+
+/* デスクトップ版
+------------------------------- */
+@media (min-width: 800px) {
+    .page-title {
+        font-size: 4rem;
+    }
+    .heading-large {
+        font-size: 3rem;
+    }
+    .post-title {
+        font-size: 2.2rem;
+    }
+
+    .page-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .blog-contents {
+        display: flex;
+        justify-content: space-between;
+    }
+    .post {
+        width: 70%;
+    }
+    .sidebar {
+        width: 25%;
+    }
+    .sidebar .heading-medium {
+        text-align: left;
+        margin-bottom: 1rem;
+        border-bottom: 2px solid #333;
+        padding-bottom: 0.5rem;
+    }
+
+    .grid {
+        gap: 2.5rem;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
